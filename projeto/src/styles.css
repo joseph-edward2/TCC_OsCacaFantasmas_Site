@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ====================== Carrossel ====================== */
+
+.container-carrossel {
+    display: flex;
+    width: 100%; 
+    min-height: 85vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.container-images {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+}
+
+.carrossel {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+    height: 600px;
+}
+
+.carrossel.ligado {
+    opacity: 1;
+}
+
+#prev-button, #next-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+#prev-button { left: 0; transform: translateY(-50%) rotate(180deg); }
+#next-button { right: 0; }
+
+#prev-button img, #next-button img { 
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+/* ====================== Navbar ====================== */
+
+.header {
+    background-color: brown;
+    padding-inline: 16px;
+}
+
+.header .nav {
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.logo{
+    font-size: 28px;
+    color: white;
+}
+
+.logo-image{
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+}
+
+.nav-list{
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-list a {
+    font-size: 18px;
+    color: #fff;
+    padding-block: 16px;
+}
+
+/* ====================== Banners ====================== */
+
+.banner-esquerdo h1,
+.banner-direito h1 {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 60px;                    
+    font-weight: 600;                   
+    color: #ffffff;               
+    text-align: center;
+    line-height: 1.4;                  
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7); /* Sombra para destacar do fundo */
+    letter-spacing: 1px;                /* Pequeno espaçamento entre letras */
+}
+
+/* Banner Containers */
+.banner-esquerdo,
+.banner-direito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;  /* Mantém o texto acima do fundo */
+}
+
+.banner-esquerdo { left: 0; }
+.banner-direito { right: 0; }
+
+/* ====================== Footer ====================== */
+
+footer{
+    width: 100%;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer-content {
+    background-color: #800000;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer-contatos h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer-socialmedia {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer-socialmedia .footer-link {
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+}
+
+#footer-socialmedia .footer-link i {
+    font-size: 1.25rem;
+}
+
+#footer-socialmedia .footer-link:hover{
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook { 
+    background-color: #4267b3;
+}
+
+#whatsaap {
+    background-color: #25d366;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: #fff;
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #eb8949;
+}
+
+#footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer-subscribe p {
+    color: #fff;
+}
+
+#input-group {
+    display: flex;
+    align-items: center;
+    background-color: #800000;
+    border-radius: 4px;
+}
+
+#input-group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input-group button {
+    background-color: #eb8949;
+    border: none;
+    color: #fff;
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#input-group button:hover {
+    opacity: 0.8;
+}
+
+#footer-copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #800000;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+/* ====================== Body ====================== */
+
+body {
+    background: linear-gradient(to bottom, #000000,#245e23, #2c460f, #071606);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* ====================== Botões ====================== */
+
+button {
+    background: linear-gradient(to bottom, #802323,#d45419, #c97f11, #e4d023);
+    border: none;      
+    outline: none;
+    border-radius: 5px;
+    height: 40px;
+    color: rgb(0, 0, 0); 
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #bb2727;
+    color: rgb(255, 255, 255);
+}

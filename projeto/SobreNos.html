@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+
+    <style>
+        
+     /* Layout geral */
+.layout {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer aside";
+    grid-template-columns: 7fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 82vh;
+    gap: 30px;
+    padding-right: 50px;
+    padding-left: 20px;
+}
+
+/* Main central */
+main {
+    grid-area: main;
+    background: rgba(51, 149, 2, 0.66);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Aside com imagens */
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+aside img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito hover nas imagens laterais */
+aside img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Footer interno com imagens pequenas */
+#imagens-baixas {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+#imagens-baixas div {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+#imagens-baixas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Body básico */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #000000, #245e23, #2c460f, #071606);
+}
+
+    </style>
+</head>
+
+<body>
+
+      <header class="header">
+        <nav class="nav">
+         <a href="./index.html" class="logo"><i class="fa-regular fa-house"></i></a>
+            <ul class="nav-list">
+                <li><a href="./SobreNos.html">sobre</a></li>
+                <li><a href="./projeto.html">produto</a></li>
+                <li><a href="./contato.html">contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <div class="layout">
+
+
+    <main>LOREM EUHIPE</main>
+
+    <aside>
+        <img src="./images/saci.jpg">
+        <img src="./images/Iara.jpg">
+        <img src="./images/mula-sem-cabeça.jpg">
+    </aside>
+
+    <footer id="imagens-baixas">
+        <div>
+            <img src="./images/boitata.jpg">
+        </div>
+
+        <div>
+            <img src="./images/matinta-perera.jpg">
+        </div>
+        <div>
+            <img src="./images/corpo-seco.jpg">
+        </div>
+
+    </footer>
+</div>
+<br><br>
+
+<!-- Inicio footer -->
+    <footer>
+        <div id="footer-content">
+            <div id="footer-contatos">
+                <h1>Logo</h1>
+                <p>sdasdasdasdasddasdadasdasdasdasdasdasd</p>
+
+                <div id="footer-socialmedia">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="whatsaap">
+                        <i class="fa-brands fa-square-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <ul class="footer-list">
+                <li>
+                    <h3>Blog</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link" >Tech</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">adventures</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">music</a>
+                </li>     
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>products</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">App</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">desktop</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Cloud</a>
+                </li>     
+            </ul>
+
+            <div id="footer-subscribe">
+                <h3>Subscribe</h3>
+                <p>dasdasdasdasdasdasdasdasdasdasdasd</p>
+            </div>
+        </div>
+        <div id="footer-copyright">
+            &#169
+            2026 all right reserve
+        </div>
+    </footer>
+<!-- Fim footer -->
+
+</body>
+
+</html>

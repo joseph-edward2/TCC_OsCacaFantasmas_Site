@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="stylesheet" href="./src/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <title>Podutos</title>
+
+  <style>
+    /* RESET básico */
+    button {
+        background: linear-gradient(to bottom, #802323,#d45419, #c97f11, #e4d023);
+        border: none;      
+        outline: none;
+        border-radius: 5px;
+        height: 40px;
+        padding: 0 15px;
+        color: rgb(0, 0, 0); 
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #bb2727;
+        color: #fff;
+    }
+
+    /* 🔹 CONTAINER PRINCIPAL */
+    .container {
+      display: grid; 
+      grid-template-rows: 60px 1fr; /* header + resto da tela */
+      height: 100vh;
+    }
+
+    /* 🔹 ÁREA PRINCIPAL */
+    .conteudo {
+      display: grid;
+      grid-template-columns: 2fr 1fr; /* esquerda maior, direita menor */
+      grid-template-rows: 300px 150px 150px; /* imagem maior + 2 cards */
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* 🔹 IMAGEM (topo esquerda) */
+    .imagem {
+      border-radius: 10px;
+      grid-column: 1 / 2; /* primeira coluna */
+      grid-row: 1 / 2;    /* primeira linha */
+      background: url('https://segredosdomundo.r7.com/wp-content/uploads/2020/10/lenda-do-curupira-origem-principais-versoes-e-adaptacoes-regionais-1.png') center/cover no-repeat;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+
+    /* 🔹 CARDS */
+    .card {
+      border-radius: 10px;
+      background: #5a1f1f;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(255, 225, 1, 0.715);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(255, 225, 1, 0.715);
+    }
+
+    .card1 { grid-column: 1 / 2; grid-row: 2 / 3; }
+    .card2 { grid-column: 1 / 2; grid-row: 3 / 4; }
+
+    /* 🔹 LATERAL (direita inteira) */
+    .lateral {
+      border-radius: 10px;
+      grid-column: 2 / 3; /* segunda coluna */
+      grid-row: 1 / 4;    /* ocupa todas as linhas */
+      background: #5a1f1f;
+      color: white;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(255, 225, 1, 0.715);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .lateral h3 {
+      margin-top: 0;
+    }
+
+    /* Body */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #000000, #245e23, #2c460f, #071606);
+    }
+
+    /* Navbar links */
+    .header .nav-list a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .header .nav-list a:hover {
+      color: #eb8949;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Inicio navbar -->
+    <header class="header">
+        <nav class="nav">
+         <a href="./index.html" class="logo"><i class="fa-regular fa-house"></i></a>
+            <ul class="nav-list">
+                <li><a href="./SobreNos.html">sobre</a></li>
+                <li><a href="./projeto.html">produto</a></li>
+                <li><a href="./contato.html">contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Fim navbar -->
+
+    <!-- 🔹 CONTEÚDO -->
+    <div class="conteudo">
+
+      <!-- imagem -->
+      <div class="imagem"></div>
+
+      <!-- cards -->
+      <div class="card card1">Wish List</div>
+      <div class="card card2">Em desenvolvimento</div>
+
+      <!-- lateral -->
+      <div class="lateral">
+        <h3>Informações do nosso jogo</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Fusce finibus nisi tincidunt facilisis dictum.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Inicio footer -->
+    <footer>
+        <div id="footer-content">
+            <div id="footer-contatos">
+                <h1>Logo</h1>
+                <p>sdasdasdasdasddasdadasdasdasdasdasdasd</p>
+
+                <div id="footer-socialmedia">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="whatsaap">
+                        <i class="fa-brands fa-square-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <ul class="footer-list">
+                <li>
+                    <h3>Blog</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link" >Tech</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">adventures</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">music</a>
+                </li>     
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>products</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">App</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">desktop</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Cloud</a>
+                </li>     
+            </ul>
+
+            <div id="footer-subscribe">
+                <h3>Subscribe</h3>
+                <p>dasdasdasdasdasdasdasdasdasdasdasd</p>
+                <div id="input-group">
+                    <input type="email" id="email">
+                    <button><i class="fa-regular fa-envelope"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="footer-copyright">
+            &#169 2026 all right reserve
+        </div>
+    </footer>
+<!-- Fim footer -->
+</body>
+</html>

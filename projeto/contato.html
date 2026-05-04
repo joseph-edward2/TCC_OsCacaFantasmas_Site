@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>Página de Contato</title>
+    <style>
+/* =================== RESET =================== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #000000, #245e23, #2c460f, #071606);
+    color: #fff;
+}
+
+/* =================== CONTAINER PRINCIPAL =================== */
+.main-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =================== FORMULÁRIO =================== */
+.form-block {
+    background-color: #5a1f1f;
+    padding: 40px;
+    color: #fff;
+    border-radius: 15px;
+    min-height: 600px;
+    box-shadow: 0 10px 25px rgba(255, 225, 1, 0.547);
+    position: relative;
+}
+
+.form-block h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #f0c14b;
+    font-size: 28px;
+}
+
+/* =================== INPUTS =================== */
+.form-block input,
+.form-block textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 20px 15px 45px; /* espaço para ícone */
+    border: none;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+    color: #333;
+    font-size: 16px;
+    box-sizing: border-box;
+    position: relative;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.form-block input:focus,
+.form-block textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #f0c14b;
+    transform: scale(1.02);
+}
+
+/* =================== ÍCONES DENTRO DOS INPUTS =================== */
+.form-block input[name="nome"]::before {
+    content: "\f007";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+.form-block input[name="email"]::before {
+    content: "\f0e0";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+.form-block input[name="fone"]::before {
+    content: "\f095";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+/* =================== BOTÃO =================== */
+button {
+    background: linear-gradient(to bottom, #802323, #d45419, #c97f11, #e4d023);
+    color: #000;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    color: #fff;
+}
+
+/* =================== FEEDBACK =================== */
+#resposta {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #f0c14b;
+}
+
+/* =================== BLOCO HORÁRIOS =================== */
+.hours-block {
+    background-color: #5a1f1f;
+    padding: 40px;
+    color: #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    align-self: start;
+    box-shadow: 0 10px 25px rgba(255, 225, 1, 0.547);
+}
+
+/* =================== NAVBAR =================== */
+.header .nav-list a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-left: 20px;
+}
+
+.header .nav-list a:hover {
+    color: #eb8949;
+}
+
+/* =================== RESPONSIVO =================== */
+@media(max-width: 900px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .hours-block {
+        font-size: 18px;
+        padding: 30px;
+    }
+}
+</style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+         <a href="./index.html" class="logo"><i class="fa-regular fa-house"></i></a>
+            <ul class="nav-list">
+                <li><a href="./SobreNos.html">sobre</a></li>
+                <li><a href="./projeto.html">produto</a></li>
+                <li><a href="./contato.html">contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="main-container">
+    <div class="form-block">
+        <h2>Contate-nos</h2>
+        <form id="meuFormulario">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <input type="text" name="fone" placeholder="Seu Telefone" required>
+            <textarea name="mensagem" placeholder="Sua Mensagem" rows="5"></textarea>
+            <button type="submit">ENVIAR</button>
+        </form>
+    <div id="resposta"></div>
+</div>
+
+    <div class="hours-block">
+        Horários de contato:<br>
+        Seg. à Sáb. 10:00-20:00<br>
+        Dom. 12:00-19:00
+    </div>
+</div>
+
+<!-- Inicio footer -->
+    <footer>
+        <div id="footer-content">
+            <div id="footer-contatos">
+                <h1>Logo</h1>
+                <p>sdasdasdasdasddasdadasdasdasdasdasdasd</p>
+
+                <div id="footer-socialmedia">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="whatsaap">
+                        <i class="fa-brands fa-square-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <ul class="footer-list">
+                <li>
+                    <h3>Blog</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link" >Tech</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">adventures</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">music</a>
+                </li>     
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>products</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">App</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">desktop</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Cloud</a>
+                </li>     
+            </ul>
+
+            <div id="footer-subscribe">
+                <h3>Subscribe</h3>
+                <p>dasdasdasdasdasdasdasdasdasdasdasd</p>
+                <div id="input-group">
+                    <input type="email" id="email">
+                    <button><i class="fa-regular fa-envelope"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="footer-copyright">
+            &#169
+            2026 all right reserve
+        </div>
+    </footer>
+<!-- Fim footer -->
+
+<script>
+    document.getElementById('meuFormulario').addEventListener('submit', function(e) {
+        e.preventDefault(); // Aqui está o segredo: impede a página de recarregar!
+
+        const msgResposta = document.getElementById('resposta');
+        msgResposta.innerHTML = "Enviando...";
+
+        const formData = new FormData(this);
+
+        fetch('./src/processa.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            msgResposta.innerHTML = data; // Mostra o "Sucesso" do PHP
+            if(data.includes("sucesso")) {
+                this.reset(); // Limpa os campos se deu certo
+            }
+        })
+        .catch(error => {
+            msgResposta.innerHTML = "Erro ao conectar com o servidor.";
+            console.error(error);
+        });
+    });
+</script>
+
+</body>
+</html>
