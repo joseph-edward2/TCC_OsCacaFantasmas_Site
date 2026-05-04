@@ -1,0 +1,3 @@
+Alteração 2ª Semana José Eduardo:
+
+Prototipação da função de comentários (Pasta comentateste)
