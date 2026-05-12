@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CURUPIRA — O Guardião das Matas</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <span class="logo-rune" aria-hidden="true">ᚷ</span>
+      CURUPIRA
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#sobre">O Jogo</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#lore">Lore</a></li>
+      <li><a href="#">Downloads</a></li>
+    </ul>
+    <button class="nav-cta">Baixar Demo</button>
+  </nav>
+
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="inicio">
+
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <!-- Chamas decorativas -->
+    <div class="flames" aria-hidden="true">
+      <div class="flame flame-1"></div>
+      <div class="flame flame-2"></div>
+      <div class="flame flame-3"></div>
+      <div class="flame flame-4"></div>
+      <div class="flame flame-5"></div>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="hero-content">
+      <p class="hero-label">Folclore Brasileiro · Terror Low Poly</p>
+      <h1 class="hero-title">
+        CURUPIRA
+        <span class="hero-title-sub">O GUARDIÃO</span>
+      </h1>
+      <p class="hero-desc">
+        Nas profundezas da Mata Atlântica, onde os pés andam ao contrário
+        e as fogueiras jamais se apagam, algo ancestral o observa.
+        Sobreviva à noite. Não quebre as regras da floresta.
+      </p>
+      <div class="hero-btns">
+        <a href="#" class="btn-primary">
+          <svg width="13" height="14" viewBox="0 0 13 14" fill="none" aria-hidden="true">
+            <path d="M1 1L12 7L1 13V1Z" fill="currentColor"/>
+          </svg>
+          Ver Trailer
+        </a>
+        <a href="#sobre" class="btn-ghost">Explorar o Jogo →</a>
+      </div>
+    </div>
+
+    <!-- Dots de paginação -->
+    <div class="hero-dots" aria-label="Indicadores de slide">
+      <div class="dot active" role="button" tabindex="0" aria-label="Slide 1"></div>
+      <div class="dot"        role="button" tabindex="0" aria-label="Slide 2"></div>
+      <div class="dot"        role="button" tabindex="0" aria-label="Slide 3"></div>
+    </div>
+
+    <!-- Indicador de scroll -->
+    <div class="scroll-hint" aria-hidden="true">
+      <svg width="16" height="22" viewBox="0 0 16 22" fill="none">
+        <rect x="1" y="1" width="14" height="20" rx="7" stroke="white" stroke-width="1.2"/>
+        <circle cx="8" cy="7" r="2" fill="white">
+          <animate attributeName="cy" values="7;13;7" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+      <span>Scroll</span>
+    </div>
+
+  </section>
+
+
+  <!-- ── SOBRE ── -->
+  <section class="sobre" id="sobre">
+    <div class="sobre-inner">
+
+      <div class="sobre-texto">
+        <p class="section-label">Sobre o Projeto</p>
+        <h2 class="section-title">A Lenda<br><span>Revivida</span></h2>
+        <p class="sobre-desc">
+          CURUPIRA é um jogo de terror em perspectiva low poly desenvolvido como
+          Trabalho de Conclusão de Curso. Baseado na mitologia do folclore brasileiro,
+          o jogador enfrenta o espírito guardião das florestas — uma entidade de pés
+          invertidos que protege a natureza com fúria ancestral.
+        </p>
+        <p class="sobre-desc">
+          Explore ambientes procedurais, resolva enigmas baseados em rituais indígenas
+          e tente sobreviver a uma criatura que conhece cada palmo da mata melhor que você.
+        </p>
+      </div>
+
+      <!-- Cards de estatísticas -->
+      <div class="sobre-stats">
+        <div class="stat-card">
+          <p class="stat-num">3</p>
+          <p class="stat-label">Capítulos de Terror</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-num">7+</p>
+          <p class="stat-label">Criaturas do Folclore</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-num">Low<br>Poly</p>
+          <p class="stat-label">Estética Visual Única</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-num">PT</p>
+          <p class="stat-label">100% em Português</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ── GALERIA ── -->
+  <section class="galeria" id="galeria">
+
+    <div class="galeria-header">
+      <h2 class="section-title">Criaturas<br><span>da Mata</span></h2>
+      <a href="#" class="see-all">Ver todas →</a>
+    </div>
+
+    <div class="cards-grid">
+
+      <article class="card">
+        <div class="card-img-wrap">
+          <img src="./imagens/Cururpira.webp" alt="Curupira — guardião da floresta" loading="lazy">
+        </div>
+        <div class="card-overlay" aria-hidden="true"></div>
+        <span class="card-badge">Principal</span>
+        <div class="card-info">
+          <p class="card-label">Espírito da Floresta</p>
+          <p class="card-title">CURUPIRA</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img-wrap">
+          <img src="./imagens/Saci.webp" alt="Saci-Pererê" loading="lazy">
+        </div>
+        <div class="card-overlay" aria-hidden="true"></div>
+        <div class="card-info">
+          <p class="card-label">Travesso · Perigoso</p>
+          <p class="card-title">SACI-PERERÊ</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img-wrap">
+          <img src="./imagens/boitatá.jpeg" alt="Boitatá — cobra de fogo" loading="lazy">
+        </div>
+        <div class="card-overlay" aria-hidden="true"></div>
+        <span class="card-badge">Chefe</span>
+        <div class="card-info">
+          <p class="card-label">Cobra de Fogo</p>
+          <p class="card-title">BOITATÁ</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img-wrap">
+          <img src="./imagens/Iara.webp" alt="Iara — sereia dos rios" loading="lazy">
+        </div>
+        <div class="card-overlay" aria-hidden="true"></div>
+        <div class="card-info">
+          <p class="card-label">Encantadora dos Rios</p>
+          <p class="card-title">IARA</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ── LORE ── -->
+  <section class="lore" id="lore">
+    <blockquote class="lore-quote">
+      <p>
+        "Aquele que derruba a árvore sagrada, aquele que caça sem necessidade —
+        o Curupira rastreia seus passos, inverte sua direção e o perde
+        para sempre nas entranhas da mata."
+      </p>
+      <cite>— Lenda Tupi-Guarani</cite>
+    </blockquote>
+  </section>
+
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer-bar">
+    <p class="footer-copy">© 2025 — Projeto TCC · Todos os direitos reservados</p>
+    <ul class="footer-links" role="list">
+      <li><a href="#">Sobre o TCC</a></li>
+      <li><a href="#">Contato</a></li>
+      <li><a href="#">Privacidade</a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
