@@ -4,6 +4,34 @@
 document.addEventListener('DOMContentLoaded', function () {
 
 
+  /* ── MENU DE USUÁRIO: abre/fecha ao clicar no ícone ── */
+  const userBtn      = document.querySelector('#userBtn');
+  const userDropdown = document.querySelector('#userDropdown');
+
+  userBtn.addEventListener('click', function (e) {
+    e.stopPropagation(); // impede que o clique "vaze" para o document
+    const aberto = userDropdown.classList.toggle('visivel');
+    userBtn.classList.toggle('ativo', aberto);
+    userBtn.setAttribute('aria-expanded', aberto);
+  });
+
+  // Fecha ao clicar em qualquer outro lugar da página
+  document.addEventListener('click', function () {
+    userDropdown.classList.remove('visivel');
+    userBtn.classList.remove('ativo');
+    userBtn.setAttribute('aria-expanded', 'false');
+  });
+
+  // Fecha ao pressionar Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      userDropdown.classList.remove('visivel');
+      userBtn.classList.remove('ativo');
+      userBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+
   /* ── NAVBAR: efeito ao rolar ── */
   const navbar = document.querySelector('#navbar');
 

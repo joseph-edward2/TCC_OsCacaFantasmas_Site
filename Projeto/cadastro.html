@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Conta — CURUPIRA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-rune" aria-hidden="true">ᚷ</span>
+      CURUPIRA
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html#sobre">O Jogo</a></li>
+      <li><a href="index.html#galeria">Galeria</a></li>
+      <li><a href="index.html#lore">Lore</a></li>
+      <li><a href="#">Downloads</a></li>
+    </ul>
+    <div class="nav-direita">
+      <button class="nav-cta">Baixar Demo</button>
+      <div class="user-menu" id="userMenu">
+        <button class="user-btn ativo" id="userBtn" aria-label="Menu do usuário" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="user-dropdown" id="userDropdown">
+          <a href="login.html" class="dropdown-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <polyline points="10 17 15 12 10 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="15" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            Iniciar sessão
+          </a>
+          <a href="cadastro.html" class="dropdown-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="19" y1="8" x2="19" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="22" y1="11" x2="16" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            Criar conta
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ── PÁGINA DE CADASTRO ── -->
+  <main class="pagina-form">
+    <div class="form-card">
+
+      <span class="form-rune" aria-hidden="true">ᚷ</span>
+      <h1 class="form-titulo">Criar Conta</h1>
+      <p class="form-subtitulo">Entre para a ordem dos guardiões.</p>
+
+      <form action="./src/cadastro.php" method="post">
+
+        <div class="campo">
+          <label for="usuario">Cadastre seu e-mail</label>
+          <input type="text" id="usuario" name="usuario" placeholder="E-mail do usuário">
+        </div>
+
+        <div class="campo">
+          <label for="senha">Crie sua senha</label>
+          <input type="password" id="senha" name="senha" placeholder="Senha">
+        </div>
+
+        <button type="submit" name="submit" class="form-submit">Salvar</button>
+
+      </form>
+
+      <div class="divisor"><span>ou</span></div>
+
+      <div class="form-rodape">
+        <span>Já tem uma conta?</span>
+        <a href="login.html">Entrar</a>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer-bar">
+    <p class="footer-copy">© 2025 — Projeto TCC · Todos os direitos reservados</p>
+    <ul class="footer-links" role="list">
+      <li><a href="#">Sobre o TCC</a></li>
+      <li><a href="#">Contato</a></li>
+      <li><a href="#">Privacidade</a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
