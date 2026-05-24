@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícia — CURUPIRA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="noticia-page">
+
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-rune" aria-hidden="true">ᚷ</span>
+      CURUPIRA
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html#sobre">O Jogo</a></li>
+      <li><a href="selecao_not.html" class="nav-ativo">Notícias</a></li>
+      <li><a href="index.html#galeria">Galeria</a></li>
+      <li><a href="index.html#lore">Lore</a></li>
+      <li><a href="#">Downloads</a></li>
+    </ul>
+    <div class="nav-direita">
+      <button class="nav-cta">Baixar Demo</button>
+      <div class="user-menu" id="userMenu">
+        <button class="user-btn" id="userBtn" aria-label="Menu do usuário" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="user-dropdown" id="userDropdown">
+          <a href="login.html" class="dropdown-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <polyline points="10 17 15 12 10 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="15" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            Iniciar sessão
+          </a>
+          <a href="cadastro.html" class="dropdown-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="19" y1="8" x2="19" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="22" y1="11" x2="16" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            Criar conta
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ── BREADCRUMB ── -->
+  <div class="breadcrumb">
+    <a href="selecao_not.html">← Notícias</a>
+    <span class="breadcrumb-sep">/</span>
+    <span>Título Notícia</span>
+  </div>
+
+
+  <!-- ── HEADER DO ARTIGO ── -->
+  <div class="article-header">
+    <div class="article-tag-row">
+      <span class="article-tag">Destaque</span>
+      <span class="article-tag-dot">◆</span>
+      <span class="article-tag-cat">Lançamento</span>
+    </div>
+    <h1 class="article-title"><em>Título</em> Notícia</h1>
+    <p class="article-subtitle">Subtítulo lorem ipsum dolor sit amet — contextualiza o leitor sobre a matéria com uma frase de efeito memorável.</p>
+    <div class="article-meta">
+      <span>Dia/Mês/Ano</span>
+      <span class="meta-sep">|</span>
+      <span>8 min de leitura</span>
+      <span class="meta-sep">|</span>
+      <span>Por Lorem Ipsum</span>
+      <div class="meta-share">
+        <button class="share-btn">Compartilhar</button>
+        <button class="share-btn">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── IMAGEM PRINCIPAL ── -->
+  <div class="article-img-wrap">
+    <div class="article-img">
+      <div class="imgph">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="80" height="80" fill="#c4520a"/>
+          <circle cx="22" cy="22" r="10" fill="white"/>
+          <path d="M0 60 L22 40 L36 50 L52 30 L80 60" stroke="white" stroke-width="3" fill="none"/>
+        </svg>
+      </div>
+    </div>
+    <p class="img-caption">Legenda da imagem — créditos e contexto visual da matéria.</p>
+  </div>
+
+
+  <!-- ── CORPO + SIDEBAR ── -->
+  <div class="article-layout">
+    <div class="article-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et venenatis est. Nulla lobortis magna massa, a fringilla mi tincidunt sit amet. Donec auctor turpis ac velit tristique sodales. Ut massa neque, consectetur sed tempus quis, scelerisque id lorem. In a nisi magna.</p>
+
+      <p>Aenean efficitur nulla at leo viverra efficitur. Duis faucibus diam in enim ornare vehicula. Duis interdum in tortor quis vestibulum. Morbi et venenatis est. Nulla lobortis magna massa, a fringilla mi tincidunt sit amet. Donec auctor turpis ac velit tristique sodales.</p>
+
+      <div class="pull-quote">"Nas profundezas da mata, algo ancestral observa. Sobreviva à noite. Não quebre as regras da floresta."</div>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et venenatis est. Nulla lobortis magna massa, a fringilla mi tincidunt sit amet. Donec auctor turpis ac velit tristique sodales. Ut massa neque, consectetur sed tempus quis, scelerisque id lorem. In a nisi magna. Aenean efficitur nulla at leo viverra efficitur. Duis faucibus diam in enim ornare vehicula. Duis interdum in tortor quis vestibulum.</p>
+
+      <p>Explore ambientes procedurais, resolva enigmas baseados em rituais indígenas e tente sobreviver a uma criatura que conhece cada palmo da mata melhor que você. A lenda ganha vida em cada esquina escura do bosque.</p>
+    </div>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-block">
+        <p class="sidebar-label">Sobre o jogo</p>
+        <div class="sidebar-stat"><div class="stat-num">3</div><div class="stat-lbl">Capítulos de Terror</div></div>
+        <div class="sidebar-stat"><div class="stat-num">7+</div><div class="stat-lbl">Criaturas do Folclore</div></div>
+        <div class="sidebar-stat"><div class="stat-num">PT</div><div class="stat-lbl">100% em Português</div></div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-label">Categorias</p>
+        <div class="sidebar-tags">
+          <a href="#" class="sidebar-tag">Terror</a>
+          <a href="#" class="sidebar-tag">Folclore</a>
+          <a href="#" class="sidebar-tag">Low Poly</a>
+          <a href="#" class="sidebar-tag">Indie</a>
+          <a href="#" class="sidebar-tag">Devlog</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+
+  <!-- ── LEIA TAMBÉM ── -->
+  <div class="related-section">
+    <div class="related-header">Leia também</div>
+    <div class="related-grid">
+      <a href="#" class="rel-card">
+        <div class="rel-img"><div class="imgph"><svg viewBox="0 0 48 48" fill="none"><rect width="48" height="48" fill="#c4520a"/><circle cx="14" cy="14" r="6" fill="white"/><path d="M0 36 L14 24 L24 30 L34 18 L48 36" stroke="white" stroke-width="2" fill="none"/></svg></div></div>
+        <div class="rel-body">
+          <div class="rel-meta">10 Mai 2025 ◆ Devlog</div>
+          <div class="rel-title">Notícia Legal</div>
+          <div class="rel-excerpt">Lorem ipsum dolor sit amet, lorem lorem blablabla...</div>
+        </div>
+      </a>
+      <a href="#" class="rel-card">
+        <div class="rel-img"><div class="imgph"><svg viewBox="0 0 48 48" fill="none"><rect width="48" height="48" fill="#c4520a"/><circle cx="14" cy="14" r="6" fill="white"/><path d="M0 36 L14 24 L24 30 L34 18 L48 36" stroke="white" stroke-width="2" fill="none"/></svg></div></div>
+        <div class="rel-body">
+          <div class="rel-meta">7 Mai 2025 ◆ Evento</div>
+          <div class="rel-title">Notícia Ilegal</div>
+          <div class="rel-excerpt">Lorem ipsum dolor sit amet, lorem lorem blablabla...</div>
+        </div>
+      </a>
+      <a href="#" class="rel-card">
+        <div class="rel-img"><div class="imgph"><svg viewBox="0 0 48 48" fill="none"><rect width="48" height="48" fill="#c4520a"/><circle cx="14" cy="14" r="6" fill="white"/><path d="M0 36 L14 24 L24 30 L34 18 L48 36" stroke="white" stroke-width="2" fill="none"/></svg></div></div>
+        <div class="rel-body">
+          <div class="rel-meta">5 Mai 2025 ◆ Lançamento</div>
+          <div class="rel-title">Notícia Trivial</div>
+          <div class="rel-excerpt">Lorem ipsum dolor sit amet, lorem lorem blablabla...</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- ── COMENTÁRIOS ── -->
+  <div class="comments-section">
+    <div class="comments-header">
+      <span class="comments-title">Comentários</span>
+      <span class="comments-count">18</span>
+    </div>
+
+    <div class="comment">
+      <div class="avatar"><span class="avatar-img">👤</span></div>
+      <div class="comment-content">
+        <p class="comment-user">lorem ipsum da silva</p>
+        <p class="comment-text">Lorem ipsun né mores — comentário sobre a matéria com opinião bastante contundente e inteligente.</p>
+        <div class="comment-actions">
+          <div class="vote">
+            <button class="vote-btn">👍</button>
+            <button class="vote-btn">👎</button>
+          </div>
+          <button class="act-btn">Responder</button>
+        </div>
+      </div>
+      <span class="comment-menu">⋮</span>
+    </div>
+
+    <div class="comment">
+      <div class="avatar"><span class="avatar-img">👤</span></div>
+      <div class="comment-content">
+        <p class="comment-user">lorem ipsinho da silva</p>
+        <p class="comment-text">Lorem ipsun né mores — outro ponto de vista igualmente válido sobre o assunto em questão aqui.</p>
+        <div class="comment-actions">
+          <div class="vote">
+            <button class="vote-btn">👍</button>
+            <button class="vote-btn">👎</button>
+          </div>
+          <button class="act-btn">Responder</button>
+        </div>
+      </div>
+      <span class="comment-menu">⋮</span>
+    </div>
+
+    <div class="comment">
+      <div class="avatar"><span class="avatar-img">👤</span></div>
+      <div class="comment-content">
+        <p class="comment-user">usuario_misterioso</p>
+        <p class="comment-text">Lorem ipsum né mores — o terceiro comentarista traz perspectiva completamente diferente dos anteriores.</p>
+        <div class="comment-actions">
+          <div class="vote">
+            <button class="vote-btn">👍</button>
+            <button class="vote-btn">👎</button>
+          </div>
+          <button class="act-btn">Responder</button>
+        </div>
+      </div>
+      <span class="comment-menu">⋮</span>
+    </div>
+  </div>
+
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer-bar">
+    <p class="footer-copy">© 2025 — Projeto TCC · Todos os direitos reservados</p>
+    <ul class="footer-links" role="list">
+      <li><a href="#">Sobre o TCC</a></li>
+      <li><a href="#">Contato</a></li>
+      <li><a href="#">Privacidade</a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -4,25 +4,40 @@
 document.addEventListener('DOMContentLoaded', function () {
 
 
+  /* ── NAVBAR: transparente com hero, sólida sem hero ── */
+  const navbar  = document.querySelector('#navbar');
+  const temHero = document.querySelector('.hero');
+
+  if (!temHero) {
+    // Páginas sem hero (login, cadastro, notícias etc.) — navbar sempre sólida
+    navbar.classList.add('solida');
+  } else {
+    // index — navbar transparente que escurece ao rolar
+    function atualizarNavbar () {
+      navbar.classList.toggle('scrolled', window.scrollY > 30);
+    }
+    window.addEventListener('scroll', atualizarNavbar);
+    atualizarNavbar();
+  }
+
+
   /* ── MENU DE USUÁRIO: abre/fecha ao clicar no ícone ── */
   const userBtn      = document.querySelector('#userBtn');
   const userDropdown = document.querySelector('#userDropdown');
 
   userBtn.addEventListener('click', function (e) {
-    e.stopPropagation(); // impede que o clique "vaze" para o document
+    e.stopPropagation();
     const aberto = userDropdown.classList.toggle('visivel');
     userBtn.classList.toggle('ativo', aberto);
     userBtn.setAttribute('aria-expanded', aberto);
   });
 
-  // Fecha ao clicar em qualquer outro lugar da página
   document.addEventListener('click', function () {
     userDropdown.classList.remove('visivel');
     userBtn.classList.remove('ativo');
     userBtn.setAttribute('aria-expanded', 'false');
   });
 
-  // Fecha ao pressionar Escape
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
       userDropdown.classList.remove('visivel');
@@ -30,21 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
       userBtn.setAttribute('aria-expanded', 'false');
     }
   });
-
-
-  /* ── NAVBAR: efeito ao rolar ── */
-  const navbar = document.querySelector('#navbar');
-
-  function atualizarNavbar () {
-    if (window.scrollY > 30) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  }
-
-  window.addEventListener('scroll', atualizarNavbar);
-  atualizarNavbar(); // roda uma vez ao carregar
 
 
   /* ── DOTS: troca o dot ativo ao clicar ── */
@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
       dot.classList.add('active');
     });
 
-    // Suporte a teclado (acessibilidade)
     dot.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -71,21 +70,19 @@ document.addEventListener('DOMContentLoaded', function () {
     '.card, .stat-card, .sobre-texto, .lore-quote'
   );
 
-  // Estado inicial: invisível e deslocado para baixo
   elementosAnimados.forEach(function (el) {
     el.style.opacity    = '0';
     el.style.transform  = 'translateY(30px)';
     el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
   });
 
-  // Observer: detecta quando o elemento entra na área visível
   const observer = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.style.opacity   = '1';
           entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target); // anima só uma vez
+          observer.unobserve(entry.target);
         }
       });
     },
@@ -95,21 +92,35 @@ document.addEventListener('DOMContentLoaded', function () {
   elementosAnimados.forEach(function (el) { observer.observe(el); });
 
 
-  /* ── PARALAX: fundo do hero se move mais devagar que o scroll ── */
+  /* ── PARALAX: apenas nas páginas com hero ── */
   const heroBg = document.querySelector('.hero-bg');
-  let scrollPendente = false;
 
-  function aplicarParalax () {
-    const offset = window.scrollY * 0.4;
-    heroBg.style.transform = 'translateY(' + offset + 'px) scale(1.09)';
-    scrollPendente = false;
+  if (heroBg) {
+    let scrollPendente = false;
+
+    function aplicarParalax () {
+      const offset = window.scrollY * 0.4;
+      heroBg.style.transform = 'translateY(' + offset + 'px) scale(1.09)';
+      scrollPendente = false;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!scrollPendente) {
+        scrollPendente = true;
+        window.requestAnimationFrame(aplicarParalax);
+      }
+    });
   }
 
-  window.addEventListener('scroll', function () {
-    if (!scrollPendente) {
-      scrollPendente = true;
-      window.requestAnimationFrame(aplicarParalax);
-    }
+
+  /* ── FILTROS DE NOTÍCIAS: troca o botão ativo ao clicar ── */
+  const filtros = document.querySelectorAll('.filtro-btn');
+
+  filtros.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filtros.forEach(function (b) { b.classList.remove('ativo'); });
+      btn.classList.add('ativo');
+    });
   });
 
 
